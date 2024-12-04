@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:transitionGroup="true"
+    tools:context=".fragment.LoginFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"> <!-- 수평으로 중앙 정렬 -->
+
+        <EditText
+            android:id="@+id/editTextDigit1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_edittext"
+            android:importantForAccessibility="yes"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editTextDigit2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_edittext"
+            android:importantForAccessibility="yes"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editTextDigit3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_edittext"
+            android:importantForAccessibility="yes"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editTextDigit4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_edittext"
+            android:importantForAccessibility="yes"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewPasswordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <Button
+        android:id="@+id/buttonLoginSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+        android:text="로그인" />
+</LinearLayout>

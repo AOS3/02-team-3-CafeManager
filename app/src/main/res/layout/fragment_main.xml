@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:transitionGroup="true"
+    tools:context=".fragment.MainFragment" >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCafeMenuShowAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+        android:text="카페 메뉴 리스트 보기" />
+
+    <Button
+        android:id="@+id/buttonCafeMenuInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+        android:text="카페 메뉴 추가하기" />
+
+    <Button
+        android:id="@+id/buttonCafeMenuSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+        android:text="카페 메뉴 검색하기" />
+
+    <Button
+        android:id="@+id/buttonCafeMenuCoffee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+        android:text="커피 메뉴 보기" />
+
+    <Button
+        android:id="@+id/buttonCafeMenuNonCoffee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+        android:text="논커피 메뉴 보기" />
+
+    <Button
+        android:id="@+id/buttonCafeMenuBread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+        android:text="빵 메뉴 보기" />
+
+    <Button
+        android:id="@+id/buttonCafeMenuCake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#03A9F4"
+        android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+        android:text="케이크 메뉴 보기" />
+
+</LinearLayout>

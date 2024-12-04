@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#2196F3"
+    android:orientation="vertical"
+    android:transitionGroup="true"
+    tools:context=".fragment.ModifyFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarModify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#9ACEF8"
+                android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+                android:gravity="center_horizontal"
+                android:text="카페 메뉴 정보 입력"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleModifyCafeType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:checkedButton="@id/buttonCoffee"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/buttonModifyCoffee"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="커피" />
+
+                <Button
+                    android:id="@+id/buttonModifyNonCoffee"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="논커피" />
+
+                <Button
+                    android:id="@+id/buttonModifyBread"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="빵" />
+
+                <Button
+                    android:id="@+id/buttonModifyCake"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="케이크" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutModifyCafeMenuName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="80dp"
+                android:hint="메뉴 이름"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/local_cafe_24px">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutModifyCafeMenuPrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="80dp"
+                android:hint="메뉴 가격"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/attach_money_24px">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+                android:text="음료 사이즈 종류"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleModifyCafeSize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                app:checkedButton="@id/buttonSizeLarge"
+                app:singleSelection="true">
+
+                <Button
+                    android:id="@+id/buttonModifySizeLarge"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Large" />
+
+                <Button
+                    android:id="@+id/buttonModifySizeMedium"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Medium" />
+
+                <Button
+                    android:id="@+id/buttonModifySizeSmall"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Small" />
+
+                <Button
+                    android:id="@+id/buttonModifySizeNoChoice"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="해당 없음" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+                    android:text="포장 가능 유무:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <RadioGroup
+                    android:id="@+id/radioButtonModifyTakeOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checkedButton="@id/radioButtonTakeOutOk"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonModifyTakeOutOk"
+                        style="@style/ToolbarTheme"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:text="포장 가능"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonModifyTakeOutNo"
+                        style="@style/ToolbarTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="포장 불가능"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+                android:text="메뉴 재고 현황"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutModifyCafeMenuStock"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="10dp"
+                android:hint="메뉴 재고 현황"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/inventory_24px">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#9ACEF8"
+                android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+                android:gravity="center_horizontal"
+                android:text="메뉴 관련 내용 메모"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <EditText
+                android:id="@+id/textFieldModifyMenuExplain"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/btn_layout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:background="@android:drawable/edit_text"
+                android:gravity="top"
+                android:hint="메뉴 특징 및 유의 사항" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#9ACEF8"
+                android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+                android:gravity="center_horizontal"
+                android:text="메뉴 사진 업로드"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <ImageView
+                android:id="@+id/imageViewModify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/image_search_24px" />
+
+            <Button
+                android:id="@+id/buttonModifyCafeMenuPicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#03A9F4"
+                android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+                android:text="메뉴 사진 가져오기" />
+
+            <Button
+                android:id="@+id/buttonModifyCafeMenuTakePicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#03A9F4"
+                android:fontFamily="@font/hakgyoansim_dunggeunmiso"
+                android:text="메뉴 사진 찍기" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
